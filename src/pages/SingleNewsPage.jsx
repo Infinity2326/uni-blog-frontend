@@ -20,7 +20,6 @@ export const SingleNewsPage = () => {
   const { user } = useSelector((state) => state.auth)
   const { news } = useSelector((state) => state.news)
 
-  const currentUrl = window.location.href.slice(22)
   const navigate = useNavigate()
   const params = useParams()
   const dispatch = useDispatch()
@@ -87,13 +86,6 @@ export const SingleNewsPage = () => {
     )
   }
 
-  if (singleNews?._id !== currentUrl?.slice(5)) {
-    return (
-      <div className="text-xl text-center text-white py-10">
-        Новости не существует
-      </div>
-    )
-  }
   return (
     <div>
       <button className="flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm py-2 px-4">

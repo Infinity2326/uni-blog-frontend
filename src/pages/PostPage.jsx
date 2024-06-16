@@ -28,7 +28,6 @@ export const PostPage = () => {
   const { user } = useSelector((state) => state.auth)
   const { posts } = useSelector((state) => state.post)
 
-  const currentUrl = window.location.href.slice(22)
   const navigate = useNavigate()
   const params = useParams()
   const dispatch = useDispatch()
@@ -99,14 +98,6 @@ export const PostPage = () => {
   if (!post) {
     return (
       <div className="text-xl text-center text-white py-10">Загрузка...</div>
-    )
-  }
-
-  if (post._id !== currentUrl) {
-    return (
-      <div className="text-xl text-center text-white py-10">
-        Поста не существует
-      </div>
     )
   }
 
