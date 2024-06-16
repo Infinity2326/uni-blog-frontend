@@ -24,7 +24,7 @@ export const SingleNewsPage = () => {
   const params = useParams()
   const dispatch = useDispatch()
   const isAuth = useSelector(checkIsAuth)
-  const id = news.findIndex((n) => n._id === params.id)
+  const id = news?.findIndex((n) => n?._id === params?.id)
 
   const handleSubmit = () => {
     try {

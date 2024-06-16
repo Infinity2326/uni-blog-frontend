@@ -20,7 +20,7 @@ export const PostItem = ({ post }) => {
         >
           {post?.imgUrl && (
             <img
-              src={`http://localhost:3002/${post.imgUrl}`}
+              src={`https://uni-blog-backend-production.up.railway.app/${post.imgUrl}`}
               alt="post"
               className="object-cover w-full"
             />

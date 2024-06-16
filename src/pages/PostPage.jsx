@@ -32,7 +32,7 @@ export const PostPage = () => {
   const params = useParams()
   const dispatch = useDispatch()
   const isAuth = useSelector(checkIsAuth)
-  const id = posts.findIndex((p) => p._id === params.id)
+  const id = posts?.findIndex((p) => p?._id === params?.id)
 
   const removePostHandler = () => {
     try {
@@ -118,7 +118,7 @@ export const PostPage = () => {
             >
               {post.imgUrl && (
                 <img
-                  src={`http://localhost:3002/${post.imgUrl}`}
+                  src={`https://uni-blog-backend-production.up.railway.app/${post.imgUrl}`}
                   alt="post"
                   className="object-cover w-full"
                 />
